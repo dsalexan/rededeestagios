@@ -1,0 +1,418 @@
+/*!
+ * Start Bootstrap - One Page Wonder (https://startbootstrap.com/template-overviews/one-page-wonder)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-one-page-wonder/blob/master/LICENSE)
+ */
+
+:root{
+  --my-red: #B71C1C;
+  --my-blue: royalblue;
+  --my-green: #1B5E20;
+  --main-color: var(--my-blue);
+}
+
+body{
+  padding-top: 79px;
+}
+
+@media (min-width: 992px) {
+  body{
+    padding-top: 81px;
+  }
+}
+
+
+header.masthead {
+  background: url('../images/brainstorming.jpg') no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+
+  /*
+  filter: gray;
+  -webkit-filter: grayscale(1); 
+  filter: grayscale(1); 
+*/
+  /*background: #333 !important;*/
+}
+
+header.masthead>.overlay {
+  height: calc(100vh - 81px);
+  text-align: center;
+  background: rgba(32, 32, 32, 0.9);
+}
+
+header.masthead .welcome-message{
+  padding: 100px 100px 0 100px;
+  text-align: left;
+}
+
+.welcome-message .main-message{
+  color: #EEE;
+  padding-bottom: 35px;
+  width: 33%;
+}
+
+.welcome-message .body-message{
+  color: #DDD;
+  /*padding: 20px;*/
+  /*background: rgba(0,0,0,0.6);*/
+  width: 66%;
+}
+
+.seletores{
+  padding-top: 139px;
+}
+
+.seletores .item-seletor{
+  text-align: center;
+  color: #aaa;
+  padding: 25px 0 30px 0;
+  cursor:pointer;
+  border-bottom: solid 7px transparent;
+}
+
+.seletores .item-seletor:hover{
+  color: #eee;
+  border-color: var(--main-color);
+  background-color: rgba(255, 255, 255, 0.05) ;
+}
+
+.seletores [data-color~=red]:hover{
+  border-color: var(--my-red);
+}
+
+.seletores [data-color~=green]:hover{
+  border-color: var(--my-green);
+}
+
+.seletores [data-color~=blue]:hover{
+  border-color: var(--my-blue);
+}
+
+.body-seletor{
+  padding: 70px 100px 0 100px;
+  height: 850px;
+  background: #EEE;
+  position: relative;
+  overflow: hidden;
+}
+
+.body-seletor .title{
+  padding-top: 15px;
+  border-top: solid 4px var(--main-color);
+  padding-bottom: 50px;
+  text-align: right;
+}
+
+.body-seletor .text{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.body-seletor .paralelo{
+  width: 55%;
+  height: 100%;
+  /*background: var(--main-color);*/
+  position: absolute;
+  top: 0;
+  right: -5%;
+  -webkit-transform: skew(-4deg);
+  -moz-transform: skew(-4deg);
+  -o-transform: skew(-4deg);
+  transform: skew(-4deg);
+
+  background: url('../images/UNIFESP2.jpg') no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+
+.body-seletor .overlay {
+  background: var(--main-color) !important;
+  opacity: 0.5;
+}
+
+.body-seletor [data-rule-color~=blue] > [data-color~=red], 
+.body-seletor [data-rule-color~=blue] > [data-color~=green], 
+.body-seletor [data-rule-color~=red] > [data-color~=blue], 
+.body-seletor [data-rule-color~=red] > [data-color~=green], 
+.body-seletor [data-rule-color~=green] > [data-color~=blue], 
+.body-seletor [data-rule-color~=green] > [data-color~=red]{
+  visibility: hidden;
+  height: 0;
+}
+
+.body-seletor [data-rule-color~=blue] > [data-color~=blue], 
+.body-seletor [data-rule-color~=red] > [data-color~=red], 
+.body-seletor [data-rule-color~=green] >[data-color~=green]{
+  visibility: visible;
+  height: auto;
+}
+
+.body-second{
+  padding: 70px 100px 0 100px;
+  background: #333;
+  height: calc(100vh - 81px);
+  position: relative;
+  overflow: hidden;
+}
+
+.body-second .title{
+  padding-top: 15px;
+  color: #DDD;
+  padding-bottom: 40px;
+}
+
+.body-second .text{
+  color: #AAA;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.body-second .paralelo{
+  width: 47.5%;
+  height: 10px;
+  background: var(--main-color);
+  position: absolute;
+  top: 10px;
+  left: 0;
+  -webkit-transform: skew(-4deg);
+  -moz-transform: skew(-4deg);
+  -o-transform: skew(-4deg);
+  transform: skew(-4deg);
+}
+
+.body-map{
+  padding: 70px 100px 0 100px;
+  background: #EEE;
+  height: 800px;
+  position: relative;
+  overflow: hidden;
+}
+
+.body-map .title{
+  padding-top: 15px;
+  border-top: solid 4px var(--main-color);
+  padding-bottom: 40px;
+  text-align: right;
+}
+
+.body-map .text{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.body-map .paralelo{
+  width: 6%;
+  height: 100%;
+  background: var(--main-color);
+  position: absolute;
+  top: 0;
+  -webkit-transform: skew(-4deg);
+  -moz-transform: skew(-4deg);
+  -o-transform: skew(-4deg);
+  transform: skew(-4deg);
+}
+
+.body-map .paralelo:first-of-type{
+  left: -2.5%;
+}
+
+.body-map .paralelo:last-of-type{
+  right: -2.5%;
+}
+
+.body-map .map-holder{
+  background: #bebebe;
+  width: 100%;
+  height: 520px;
+}
+
+.contact{
+  padding: 70px 100px 0 100px;
+  background: #333;
+  height: calc(100vh - 81px - 120px);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.contact .title{
+  color: #DDD;
+  padding-bottom: 20px;
+}
+
+.contact .text{
+  color: #BBB;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.contact .buttons{
+  padding-top: 50px;
+}
+
+.contact .solid-button{
+  cursor: pointer;
+  background: var(--main-color);
+  padding: 5px;
+  border: solid 2px transparent;
+}
+
+.contact .empty-button{
+  cursor: pointer;
+  padding: 5px;
+  border: solid 2px var(--main-color);
+}
+
+.contact .button{
+  color: #eee;
+  opacity: 0.75;
+  border-radius: 30px;
+}
+
+.contact .button:hover{
+  opacity: 1;
+}
+
+.contact #lower-contact > div,
+.contact:not([data-mode~=none]) > .container >  .title,
+.contact:not([data-mode~=none]) > .container > .text,
+.contact:not([data-mode~=none]) > .container > .buttons{
+  visibility: hidden;
+  height: 0;
+  padding: 0;
+}
+
+.contact[data-mode~=sugestion] #lower-contact > div.sugestion,
+.contact[data-mode~=talking] #lower-contact > div.talking{
+  visibility: visible;
+  height: auto;
+}
+
+.contact .input-row{
+  padding: 5px 0;
+}
+
+.input-row > div:first-child{
+  padding-left: 0;
+}
+
+.input-row > div:last-child{
+  padding-right: 0;
+}
+
+.contact input,
+.contact textarea{
+  border: none;
+  background: #222;
+  color: #DDD;
+  padding: 2px 8px;
+  min-width: 100%;
+}
+
+.contact input[type=button]{
+  min-width: 50%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.contact input[type=button]:hover{
+  background: var(--main-color);
+
+}
+
+.contact .sugestion .text{
+  padding-bottom: 20px;
+}
+
+.contact .talking .info > .text{
+  padding-top: 15px;
+}
+
+.contact .talking .info > .text:first-of-type{
+  padding-top: 0;
+}
+
+
+
+.contact .paralelo{
+  width: 6%;
+  height: 100%;
+  background: var(--main-color);
+  position: absolute;
+  top: 0;
+  -webkit-transform: skew(4deg);
+  -moz-transform: skew(4deg);
+  -o-transform: skew(4deg);
+  transform: skew(4deg);
+  visibility: hidden
+}
+
+.contact .paralelo:first-of-type{
+  left: -3.5%;
+}
+
+.contact .paralelo:last-of-type{
+  right: -1.5%;
+}
+
+.contact[data-mode~=sugestion] .paralelo:first-of-type,
+.contact[data-mode~=talking] .paralelo:last-of-type{
+  visibility: visible;
+}
+
+
+
+
+.footer{
+  background: #202020;
+}
+
+a.logo_holder{
+  height: 65px !important;
+}
+
+.nav-item{
+  border-bottom: solid 2px transparent;
+}
+
+.nav-item:hover{
+  border-bottom-color: #CCC;
+}
+
+.nav-link{
+  font-family: "Roboto";
+  font-weight: 500;
+  color: #EEE !important;
+  border-right: solid transparent 1px;
+}
+
+.nav-link:hover{
+  font-weight: 600;
+  border: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+.img-fluid-height{
+  max-height: 100%;
+  width: auto;
+}
+
+.col-centered{
+  float: none;
+  margin: 0 auto;
+}
