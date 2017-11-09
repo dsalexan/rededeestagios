@@ -12,6 +12,8 @@
     <!-- bootstrap css -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/general.css" rel="stylesheet">
+
+    <!--LEMBRAR DE SUBIR AS FONTES JUNTO COM O SERVIDOR-->
   </head>
 
   <body>
@@ -26,13 +28,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link header-link" id="link-body-seletor" href="#trabalho">O TRABALHO</a>
+              <a class="nav-link header-link" id="link-body-seletor" href="#trabalho">LINK #1</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link header-link" id="link-body-second" href="#rede">A REDE</a>
+              <a class="nav-link header-link" id="link-body-second" href="#rede">LINK #2</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link header-link" id="link-body-map" href="#empresa">A EMPRESA</a>
+              <a class="nav-link header-link" id="link-body-map" href="#empresa">LINK #3</a>
             </li>
             <li class="nav-item">
               <a class="nav-link header-link" id="link-contact" href="#contato">CONTATO</a>
@@ -44,13 +46,19 @@
 
     <header class="masthead">
       <div class="overlay">
-        <div class="container welcome-message">
-          <div class="main-message"><h2 class="text-white">Main Welcome Message</h2></div>
-          <div class="body-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta est vel lectus malesuada, nec convallis nunc malesuada. Curabitur eleifend ante nec sem interdum placerat et nec lorem. Nunc ultrices tortor vel sodales pulvinar. Donec quis consectetur augue. Cras at turpis nec nisi efficitur imperdiet in in nisl. Aliquam sed ullamcorper lacus. Suspendisse blandit neque sed orci fringilla varius. Sed iaculis, leo varius laoreet scelerisque, erat mi malesuada libero, vulputate lobortis tellus risus non nisi.</div>
-          <div class="row seletores">
-              <div class="item-seletor col-md-4" data-color="blue"><h5>Azul</h5></div>
-              <div class="item-seletor col-md-4" data-color="red"><h5>Vermelho</h5></div>
-              <div class="item-seletor col-md-4" data-color="green"><h5>Verde</h5></div>
+        <div class="welcome-message">
+          <div class="top-pusher">
+            <div>
+              <div class="main-message"><h2 class="text-white">Main Welcome Message</h2></div>
+              <div class="body-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porta est vel lectus malesuada, nec convallis nunc malesuada. Curabitur eleifend ante nec sem interdum placerat et nec lorem. Nunc ultrices tortor vel sodales pulvinar. Donec quis consectetur augue. Cras at turpis nec nisi efficitur imperdiet in in nisl. Aliquam sed ullamcorper lacus. Suspendisse blandit neque sed orci fringilla varius. Sed iaculis, leo varius laoreet scelerisque, erat mi malesuada libero, vulputate lobortis tellus risus non nisi.</div>
+            </div>
+          </div>
+          <div class="container bottom-pusher">
+            <div class="row seletores">
+                <div class="item-seletor col-md-4" data-color="blue"><h5>Azul</h5></div>
+                <div class="item-seletor col-md-4" data-color="red"><h5>Vermelho</h5></div>
+                <div class="item-seletor col-md-4" data-color="green"><h5>Verde</h5></div>
+            </div>
           </div>
         </div>
       </div>
@@ -92,6 +100,9 @@
     </section>
 
     <section class="body-map">
+      <!-- ANALISAR VIABILIDADE DE USAR A API DO GOOGLE MAPS AO INVEZ DO IFRAME -->
+      <!-- PERSONALIZAR PONTO DA ECTM NO MAPA -->
+      <!-- MOSTRAR TOOLTIP AO ENTRAR NA AREA -->
       <div class="paralelo"></div>
       <div class="container">
         <div class="row align-items-center">
@@ -99,7 +110,9 @@
             <div class="title"><h4>Theres suposed to be a map here nigga</h4></div>
           </div>
         </div>
-        <div class="map-holder"></div>
+        <div class="map-holder">
+          <iframe src="https://www.google.com/maps/d/embed?mid=1akAyF1s7SChwfAPWDJzzAhIZNTk"></iframe>
+        </div>
       </div>
       <div class="paralelo"></div>
     </section>
@@ -125,11 +138,13 @@
           <div class="col-md-2"></div>
         </div>
         <section id="lower-contact">
+          <!-- ADICIONAR FORMULARIO E FUNCOES DE EMAIL -->
           <div class="row sugestion">
             <div class="col-md-8 col-centered">
               <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh mauris, interdum vitae commodo nec, vulputate ac risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum euismod arcu non purus mattis sollicitudin in vel ligula.</div>
               <div class="container">
                 <div class="row input-row">
+                  <!-- ADICIONAR NIVEL DE URGENCIA -->
                   <div class="col-md-6">
                     <input type="text" placeholder="Nome"></input>
                   </div>
@@ -197,12 +212,16 @@
                     </div>
                   </div>  
                 </div>
-                <div class="col-md-1"></div>
-                <div class="col-md-3 info">
-                  <div class="text">Rodovia Washington Luís, Km 235 – SP 310 Jardim Guanabara CEP 13565-905 | São Carlos, SP</div>
-                  <div class="text">+55 (16) 3351 9495</div>
-                  <div class="text">contato@catijr.com.br</div>
-                  <div class="text">facebook.com/catijr</div>
+                <div class="col-md-1">
+                  <div class="separator"></div>
+                </div>
+                <div class="col-md-3 info vertical-centralizer">
+                  <div>
+                    <div class="text"><span class="glyphicon glyphicon-globe"></span> Rodovia Washington Luís, Km 235 – SP 310 Jardim Guanabara CEP 13565-905 | São Carlos, SP</div>
+                    <div class="text"><span class="glyphicon glyphicon-phone"></span> +55 (16) 3351 9495</div>
+                    <div class="text"><span class="glyphicon glyphicon-envelope"></span> contato@catijr.com.br</div>
+                    <div class="text">facebook.com/catijr</div>
+                  </div>
                 </div>
                 <div class="col-md-1"></div>
               </div>
@@ -216,7 +235,7 @@
     <!-- footer -->
     <footer class="py-5 footer">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+        <p class="m-0 text-center text-white">&copy; 2017 ECTM Jr | Todos os direitos reservados</p>
       </div>
       <!-- /.container -->
     </footer>

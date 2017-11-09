@@ -5,9 +5,9 @@
  */
 
 :root{
-  --my-red: #B71C1C;
-  --my-blue: royalblue;
-  --my-green: #1B5E20;
+  --my-red: #BE0811;
+  --my-blue: #4A72B0;
+  --my-green: #54963D;
   --main-color: var(--my-blue);
 }
 
@@ -44,8 +44,18 @@ header.masthead>.overlay {
 }
 
 header.masthead .welcome-message{
-  padding: 100px 100px 0 100px;
+  padding: 0 100px 0 100px;
   text-align: left;
+  height: 100%;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.top-pusher{
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .welcome-message .main-message{
@@ -61,8 +71,20 @@ header.masthead .welcome-message{
   width: 66%;
 }
 
+.bottom-pusher{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25%;
+  padding: 0 !important;
+}
+
 .seletores{
-  padding-top: 139px;
+  padding: 0 !important;
+  width: 100%;
+
+  flex: initial;
+  align-self: flex-end;
 }
 
 .seletores .item-seletor{
@@ -232,13 +254,26 @@ header.masthead .welcome-message{
   height: 520px;
 }
 
+.body-map iframe{
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+div.i4ewOd-pzNkMb-tJHJj{
+  background: var(--main-color) !important;
+}
+
 .contact{
-  padding: 70px 100px 0 100px;
   background: #333;
   height: calc(100vh - 81px - 120px);
   position: relative;
   overflow: hidden;
   text-align: center;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact .title{
@@ -330,12 +365,22 @@ header.masthead .welcome-message{
   padding-bottom: 20px;
 }
 
-.contact .talking .info > .text{
-  padding-top: 15px;
+.contact .talking .info > div > .text{
+  padding-top: 20px;
+  font-size: 0.85em;
 }
 
 .contact .talking .info > .text:first-of-type{
   padding-top: 0;
+}
+
+.contact .talking .separator{
+  position: relative;
+  top: -10%;
+  height: 120%;
+  width: 3%;
+  background: #555;
+  margin: 0 auto;
 }
 
 
@@ -381,7 +426,7 @@ a.logo_holder{
   border-bottom: solid 2px transparent;
 }
 
-.nav-item:hover{
+.nav-item:hover, .nav-hovered{
   border-bottom-color: #CCC;
 }
 
@@ -415,4 +460,10 @@ a.logo_holder{
 .col-centered{
   float: none;
   margin: 0 auto;
+}
+
+.vertical-centralizer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

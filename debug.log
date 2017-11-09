@@ -3,3 +3,7 @@
 [1102/181913.666:ERROR:process_info.cc(632)] range at 0xcb3e2fc800000000, size 0x1f fully unreadable
 [1102/181913.667:ERROR:process_info.cc(632)] range at 0x0, size 0x1f fully unreadable
 [1102/181915.080:ERROR:process_info.cc(396)] NtQuerySystemInformation SystemExtendedHandleInformation: O comprimento do registro de informações especificado não coincide com o comprimento necessário à classe de informações especificada.  (0xc0000004)
+[1108/222601.371:ERROR:process_reader_win.cc(151)] SuspendThread: Acesso negado. (0x5)
+[1108/222601.381:ERROR:process_info.cc(632)] range at 0x4488302000000000, size 0xd8 fully unreadable
+[1108/222601.381:ERROR:process_info.cc(632)] range at 0x4488304000000000, size 0xd8 fully unreadable
+[1108/222601.382:ERROR:process_info.cc(632)] range at 0x0, size 0xd8 fully unreadable
