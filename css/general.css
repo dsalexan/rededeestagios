@@ -5,11 +5,12 @@
  */
 
 :root{
-  --my-red: #BE0811;
+  --my-red: #F0D200;
   --my-blue: #4A72B0;
   --my-green: #54963D;
   --main-color: var(--my-blue);
 }
+
 
 body{
   padding-top: 79px;
@@ -114,11 +115,15 @@ header.masthead .welcome-message{
 }
 
 .body-seletor{
-  padding: 70px 100px 0 100px;
-  height: 850px;
+  padding: 0 100px 0 100px;
+  height: calc(100vh - 81px - 94px);
   background: #EEE;
   position: relative;
   overflow: hidden;
+}
+
+.body-seletor #selector-text-holder{
+  padding: 0 2.5%;
 }
 
 .body-seletor .title{
@@ -134,28 +139,46 @@ header.masthead .welcome-message{
 }
 
 .body-seletor .paralelo{
-  width: 55%;
+  width: 50%;
   height: 100%;
   /*background: var(--main-color);*/
   position: absolute;
   top: 0;
   right: -5%;
-  -webkit-transform: skew(-4deg);
-  -moz-transform: skew(-4deg);
-  -o-transform: skew(-4deg);
-  transform: skew(-4deg);
+  -webkit-transform: skew(-6deg);
+  -moz-transform: skew(-6deg);
+  -o-transform: skew(-6deg);
+  transform: skew(-6deg);
+  overflow: hidden;
+}
+
+.body-seletor .paralelo:before{
+  content: "";
+  position: absolute;
+  height: 135%;
+  width: 135%;
+  top: -12.5%;
+  left: -2.5%;
 
   background: url('../images/UNIFESP2.jpg') no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+  
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
 }
 
 
 .body-seletor .overlay {
   background: var(--main-color) !important;
   opacity: 0.5;
+}
+
+.body-seletor .overlay:before{
+  background: none;
+  content: "";
 }
 
 .body-seletor [data-rule-color~=blue] > [data-color~=red], 
@@ -209,9 +232,9 @@ header.masthead .welcome-message{
 }
 
 .body-map{
-  padding: 70px 100px 0 100px;
+  padding: 0 100px 0 100px;
   background: #EEE;
-  height: 800px;
+  height: calc(100vh - 81px);
   position: relative;
   overflow: hidden;
 }
@@ -240,18 +263,52 @@ header.masthead .welcome-message{
   transform: skew(-4deg);
 }
 
-.body-map .paralelo:first-of-type{
+.body-map .paralelo.black{
+  width: 4%;
+  background: #505050;
+}
+
+
+.body-map .paralelo.white:first-of-type{
   left: -2.5%;
 }
 
-.body-map .paralelo:last-of-type{
+.body-map .paralelo.white:last-of-type{
   right: -2.5%;
 }
 
+
+.body-map .paralelo.black:first-of-type{
+  left: -2%;
+}
+
+.body-map .paralelo.black:last-of-type{
+  right: -2%;
+}
+
 .body-map .map-holder{
-  background: #bebebe;
-  width: 100%;
-  height: 520px;
+  /*background: #bebebe;*/
+  width: 90%;
+  height: 480px;
+  border-bottom: solid 4px var(--main-color);
+  padding-bottom: 11px;
+  position: relative;
+}
+
+.body-map .map-holder:after{
+  cursor: pointer;
+  content: "?";
+  padding: 6.75px 14px;
+  background: #404040;
+  color: #CCC;
+  border-radius: 0 3.5px 3.5px 0;
+  font-size: 1.35em;
+  font-weight: 600;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: -2em;
+  z-index: 1000;
 }
 
 .body-map iframe{
@@ -262,6 +319,53 @@ header.masthead .welcome-message{
 
 div.i4ewOd-pzNkMb-tJHJj{
   background: var(--main-color) !important;
+}
+
+.body-map .tooltip{
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  background: #404040;
+  padding: 12px 20px 20px 20px;
+  color: #CCC;
+  font-size: 0.8em;
+  border-radius: 5px;
+  opacity: 1;
+  width: 30%;
+
+  visibility: hidden;
+  height: 0;
+}
+.body-map .tooltip:hover{
+  background: #303030;
+}
+
+.body-map .tooltip-hidden{
+  visibility: hidden !important;
+  height: 0 !important;
+}
+
+.body-map:hover .tooltip{
+  visibility: visible;
+  height: auto;
+}
+
+.body-map .tooltip-close{
+  width: 100%;
+  text-align: right;
+  display: block;
+  padding-bottom: 8px;
+  cursor: pointer;
+}
+
+.body-map .tooltip-close:before{
+  content: "";
+  display: inline-block;
+  height: 0.9em;
+  width: 90%;
+  border-bottom: 3px solid var(--main-color);
+  position: absolute;
+  left: 0;
 }
 
 .contact{
@@ -278,13 +382,17 @@ div.i4ewOd-pzNkMb-tJHJj{
 
 .contact .title{
   color: #DDD;
-  padding-bottom: 20px;
+  font-size: 1.75em;
+  padding: 10px 5px 50px 5px;
+  border-top: 3px solid var(--main-color);
+  display: inline-block;
 }
 
 .contact .text{
   color: #BBB;
   text-align: justify;
-  text-justify: inter-word;
+  justify-content: inter-word;
+  font-size: 0.985em;
 }
 
 .contact .buttons{
@@ -416,6 +524,13 @@ div.i4ewOd-pzNkMb-tJHJj{
 
 .footer{
   background: #202020;
+  height: 120px;
+}
+
+.footer div{
+  width: 100%;
+  text-align: center;
+  color: #EEE;
 }
 
 a.logo_holder{
@@ -432,13 +547,14 @@ a.logo_holder{
 
 .nav-link{
   font-family: "Roboto";
-  font-weight: 500;
-  color: #EEE !important;
+  font-weight: 300;
+  color: #DDD !important;
   border-right: solid transparent 1px;
 }
 
 .nav-link:hover{
-  font-weight: 600;
+  font-weight: 700;
+  color:#FFF !important;
   border: 0;
 }
 
