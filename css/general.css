@@ -295,12 +295,11 @@ header.masthead .welcome-message{
   position: relative;
 }
 
-.body-map .map-holder:after{
+.body-map .map-holder .tip{
   cursor: pointer;
-  content: "?";
   padding: 6.75px 14px;
-  background: #404040;
-  color: #CCC;
+  background: var(--main-color);
+  color: #EEE;
   border-radius: 0 3.5px 3.5px 0;
   font-size: 1.35em;
   font-weight: 600;
@@ -310,6 +309,12 @@ header.masthead .welcome-message{
   right: -2em;
   z-index: 1000;
 }
+
+.body-map .map-holder .tip-hidden{
+  opacity: 0.5;
+  cursor: initial;
+}
+
 
 .body-map iframe{
   height: 100%;

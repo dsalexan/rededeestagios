@@ -61,8 +61,10 @@ $('.header-link').click(function(){
 
 $('.tooltip-close').click(function(){
     $('#tooltip').addClass('tooltip-hidden');
+    $("#tip-element").removeClass('tip-hidden');
 });
 
-$('.body-map .map-holder:after').click(function(){
-    alert('foi');
+$('.body-map .map-holder #tip-element').click(function(){
+    $('#tooltip').removeClass('tooltip-hidden');
+    $("#tip-element").addClass('tip-hidden');
 });
