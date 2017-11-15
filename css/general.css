@@ -91,9 +91,13 @@ header.masthead .welcome-message{
 .seletores .item-seletor{
   text-align: center;
   color: #aaa;
-  padding: 25px 0 30px 0;
+  padding: 1em 0 1em 0;
   cursor:pointer;
-  border-bottom: solid 7px transparent;
+  border-bottom: solid 5px transparent;
+}
+
+.seletores .item-seletor h5{
+  font-size: 1.125rem;
 }
 
 .seletores .item-seletor:hover{
@@ -116,7 +120,7 @@ header.masthead .welcome-message{
 
 .body-seletor{
   padding: 0 100px 0 100px;
-  height: calc(100vh - 81px - 94px);
+  height: calc(100vh - 81px - 60px);
   background: #EEE;
   position: relative;
   overflow: hidden;
@@ -127,15 +131,38 @@ header.masthead .welcome-message{
 }
 
 .body-seletor .title{
-  padding-top: 15px;
-  border-top: solid 4px var(--main-color);
-  padding-bottom: 50px;
+  padding-top: 1em;
+  /*border-top: solid 4px var(--main-color);*/
+  padding-bottom: 1.5em;
   text-align: right;
+}
+
+.body-seletor .title h3{
+  position: relative;
+  display: inline-block;
+}
+
+.body-seletor .title h3:before{
+  border-top: solid 4px var(--main-color);
+  content: "";
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  margin-top: -0.3em;
+  /*left: 5%;*/
+}
+
+.body-seletor [data-rule-color~=green] .title h3:before{
+  width: calc(100% - 1em);
 }
 
 .body-seletor .text{
   text-align: justify;
-  text-justify: inter-word;
+  padding-left: 1.5em;
+}
+
+.body-seletor p{
+  margin-bottom: 1.75rem;
 }
 
 .body-seletor .paralelo{
@@ -155,9 +182,9 @@ header.masthead .welcome-message{
 .body-seletor .paralelo:before{
   content: "";
   position: absolute;
-  height: 135%;
-  width: 135%;
-  top: -12.5%;
+  height: 170%;
+  width: 170%;
+  top: -22.5%;
   left: -2.5%;
 
   background: url('../images/UNIFESP2.jpg') no-repeat center center scroll;
@@ -166,8 +193,8 @@ header.masthead .welcome-message{
   background-size: cover;
   -o-background-size: cover;
   
-  -webkit-transform: rotate(-3deg);
-  transform: rotate(-3deg);
+  -webkit-transform: rotate(-6deg);
+  transform: rotate(-6deg);
 }
 
 
@@ -245,13 +272,13 @@ header.masthead .welcome-message{
   margin:  0 auto;
   top: calc(50% - 30px - 1em);
   z-index: 100;
-  color: #111;
+  color: #EEE;
   text-transform: uppercase;
   font-weight: 700;
   padding: 1em;
   width: 100%;
   text-align: center;
-  background-color: #939393;
+  background-color: #333;
   
 }
 
