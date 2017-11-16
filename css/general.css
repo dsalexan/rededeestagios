@@ -346,6 +346,14 @@ header.masthead .welcome-message{
   position: relative;
 }
 
+.body-map .map-holder .arrow-hint{
+  position: absolute;
+  top: 0;
+  font-size: 2em;
+  color: var(--main-color);
+  left: -2em;
+}
+
 .body-map .map-holder .tip{
   cursor: pointer;
   padding: 6.75px 14px;
@@ -373,7 +381,7 @@ header.masthead .welcome-message{
   border: 0;
 }
 
-div.i4ewOd-pzNkMb-tJHJj{
+.body-map .map-holder .map-header{
   background: var(--main-color) !important;
 }
 
@@ -392,6 +400,7 @@ div.i4ewOd-pzNkMb-tJHJj{
   visibility: hidden;
   height: 0;
 }
+
 .body-map .tooltip:hover{
   background: #303030;
 }
@@ -424,6 +433,12 @@ div.i4ewOd-pzNkMb-tJHJj{
   left: 0;
 }
 
+.body-map .hint--medium:after{
+  width: 140px;
+}
+
+
+
 .contact{
   background: #333;
   height: calc(100vh - 81px - 120px);
@@ -449,6 +464,7 @@ div.i4ewOd-pzNkMb-tJHJj{
   text-align: justify;
   justify-content: inter-word;
   font-size: 0.985em;
+  padding: 0 1.5em;
 }
 
 .contact .buttons{
@@ -514,13 +530,15 @@ div.i4ewOd-pzNkMb-tJHJj{
   min-width: 100%;
 }
 
-.contact input[type=button]{
+.contact input[type=button],
+.contact input[type=submit]{
   min-width: 50%;
   padding: 8px;
   cursor: pointer;
 }
 
-.contact input[type=button]:hover{
+.contact input[type=button]:hover,
+.contact input[type=submit]:hover{
   background: var(--main-color);
 
 }

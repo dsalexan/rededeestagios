@@ -10,6 +10,8 @@
     <title>Rede de Estágios</title>
 
     <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/hint.min.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/general.css" rel="stylesheet">
 
@@ -53,7 +55,7 @@
               <div class="main-message"><h2 class="text-white">Rede de Estágios</h2></div>
               <div class="body-message">
                 <p>A Rede de Estágios é uma iniciativa da Empresa Júnior da UNIFESP SJC (ECTM JR) que visa aumentar as relações empresariais da universidade a fim de conceder mais oportunidades aos alunos da universidade.</p>
-                <p>O projeto é estruturado em três vertentes: celebrar novos convênios de modo a facilitar o ingresso dos alunos da universidade no mercado de trabalho, mapear as empresas conveniadas de acordo com o cursos fornecidos no Campus de São José dos Campos e oferecer treinamentos para processos seletivos.</p>
+                <p>O projeto é estruturado em três vertentes: celebrar novos convênios de modo a facilitar o ingresso dos alunos da universidade no mercado de trabalho, mapear as empresas conveniadas de acordo com os cursos oferecidos no Campus de São José dos Campos e oferecer treinamentos para processos seletivos.</p>
               </div>
             </div>
           </div>
@@ -115,8 +117,9 @@
       <!-- MOSTRAR TOOLTIP AO ENTRAR NA AREA -->
       <div class="paralelo white" style="left: -2.5%;"></div>
       <div class="paralelo black" style="left: -2%;"></div>
-      <div id="map-holder" class="map-holder">
-        <iframe src="https://www.google.com/maps/d/embed?mid=1akAyF1s7SChwfAPWDJzzAhIZNTk"></iframe>
+      <div id="map-holder" class="map-holder hint--right hint--medium" aria-label="O mapeamento visa auxiliar o aluno a encontrar empresas que já tenham o convênio com a universidade. As empresas estão divididas em quatro áreas: Engenharia de materiais, Engenharia da computação, Engenharia Biomédica e Biotecnologia.">
+        <div class="arrow-hint"><i class="fa fa-arrow-right" aria-hidden="true"></i></div>
+        <iframe id="map-frame" src="https://www.google.com/maps/d/embed?mid=1akAyF1s7SChwfAPWDJzzAhIZNTk"></iframe>
         <div id="tip-element" class="tip tip-hidden">?</div>
       </div>
       <div id="tooltip" class="tooltip">
@@ -127,7 +130,7 @@
       <div class="paralelo black" style="right: -2%;"></div>
     </section>
 
-    <section class="contact"  data-mode="none">
+    <section id="contato" class="contact"  data-mode="none">
       <div class="paralelo"></div>
       <div class="container">
         <div class="row">
@@ -138,8 +141,8 @@
         <div class="row text">
           <div class="col-md-8 col-centered">
             <div class="text">
-              A empresa que você quer estagiar não está no mapa? Sugira a empresa que entraremos em contato para fazer o convênio!</br>
-              Tem outras dúvidas ou sugestões para a rede de estágios? Fale conosco!
+              <p>A empresa que você quer estagiar não está no mapa? Sugira a empresa que entraremos em contato para fazer o convênio!</p><p>
+              Tem outras dúvidas ou sugestões para a rede de estágios? Fale conosco!</p>
             </div>
           </div>
         </div>
@@ -155,40 +158,48 @@
           <div class="row sugestion">
             <div class="col-md-8 col-centered">
               <div class="container">
-                <div class="row input-row">
-                  <!-- ADICIONAR NIVEL DE URGENCIA -->
-                  <div class="col-md-6">
-                    <input type="text" placeholder="Nome"></input>
+                <form name="sugest-form" method="post" action="send-mail-sugest.php">
+                  <div class="row input-row">
+                    <!-- ADICIONAR NIVEL DE URGENCIA -->
+                    <div class="col-md-6">
+                      <input name="nome" type="text" placeholder="Nome"></input>
+                    </div>
+                    <div class="col-md-6">
+                      <input name="email" type="text" placeholder="Email"></input>
+                    </div>
                   </div>
-                  <div class="col-md-6">
-                    <input type="text" placeholder="Email"></input>
+                  <div class="row input-row">
+                    <div class="col-md-6">
+                      <input name="empresa" type="text" placeholder="Empresa"></input>
+                    </div>
+                    <div class="col-md-6">
+                      <input name="contato_empresa" type="text" placeholder="Contato da Empresa"></input>
+                    </div>
                   </div>
-                </div>
-                <div class="row input-row">
-                  <div class="col-md-6">
-                    <input type="text" placeholder="Empresa"></input>
+                  <div class="row input-row">
+                    <div class="col-md-12">
+                      <input name="urgencia" type="text" placeholder="Urgencia"></input>
+                    </div>
                   </div>
-                  <div class="col-md-6">
-                    <input type="text" placeholder="Contato"></input>
+                  <div class="row input-row">
+                    <div class="col-md-12">
+                      <textarea name="info" placeholder="Informações adicionais"></textarea>
+                    </div>
                   </div>
-                </div>
-                <div class="row input-row">
-                  <div class="col-md-12">
-                    <textarea placeholder="Informações adicionais"></textarea>
+                  <div class="row input-row">
+                    <div class="col-md-6">
+                      <input id="sendSugestion" type="submit" value="Enviar"></input>
+                    </div>
+                    <div class="col-md-6">
+                      <input class="cancel" type="button" value="Cancelar"></input>
+                    </div>
                   </div>
-                </div>
-                <div class="row input-row">
-                  <div class="col-md-6">
-                    <input id="sendSugestion" type="button" value="Enviar"></input>
-                  </div>
-                  <div class="col-md-6">
-                    <input class="cancel" type="button" value="Cancelar"></input>
-                  </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
           <div class="row talking">
+            <form name="contact-form" method="post" action="send-mail-contact.php">
             <div class="container">
               <div class="row">
                 <div class="col-md-1"></div>
@@ -196,27 +207,27 @@
                   <div class="container">
                     <div class="row input-row">
                       <div class="col-md-6">
-                        <input type="text" placeholder="Nome"></input>
+                        <input name="nome" type="text" placeholder="Nome"></input>
                       </div>
                     </div>
                     <div class="row input-row">
                       <div class="col-md-6">
-                        <input type="text" placeholder="Email"></input>
+                        <input name="email" type="text" placeholder="Email"></input>
                       </div>
                     </div>
                     <div class="row input-row">
                       <div class="col-md-6">
-                        <input type="text" placeholder="Assunto"></input>
+                        <input name="assunto" type="text" placeholder="Assunto"></input>
                       </div>
                     </div>
                     <div class="row input-row">
                       <div class="col-md-12">
-                        <textarea placeholder="Mensagem"></textarea>
+                        <textarea name="mensagem" placeholder="Mensagem"></textarea>
                       </div>
                     </div>
                     <div class="row input-row">
                       <div class="col-md-6">
-                        <input id="sendSugestion" type="button" value="Enviar"></input>
+                        <input id="sendSugestion" type="submit" value="Enviar"></input>
                       </div>
                       <div class="col-md-6">
                         <input class="cancel" type="button" value="Cancelar"></input>
@@ -229,15 +240,16 @@
                 </div>
                 <div class="col-md-3 info vertical-centralizer">
                   <div>
-                    <div class="text"><span class="glyphicon glyphicon-globe"></span> Rodovia Washington Luís, Km 235 – SP 310 Jardim Guanabara CEP 13565-905 | São Carlos, SP</div>
-                    <div class="text"><span class="glyphicon glyphicon-phone"></span> +55 (16) 3351 9495</div>
-                    <div class="text"><span class="glyphicon glyphicon-envelope"></span> contato@catijr.com.br</div>
-                    <div class="text">facebook.com/catijr</div>
+                    <div class="text"><span class="glyphicon glyphicon-globe"></span> Unidade Parque Tecnológico - Avenida Cesare Mansueto Giulio Lattes, n° 1201 - Eugênio de Mello, CEP: 12247-014</div>
+                    <div class="text"><span class="glyphicon glyphicon-phone"></span> (TELEFONE)</div>
+                    <div class="text"><span class="glyphicon glyphicon-envelope"></span> rededeestagios@ectmjr.com.br</div>
+                    <div class="text">facebook.com/departamentodeestagiosunifesp</div>
                   </div>
                 </div>
                 <div class="col-md-1"></div>
               </div>
             </div>
+            </form>
           </div>
         </section>
       </div>
