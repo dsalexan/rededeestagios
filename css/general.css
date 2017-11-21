@@ -269,18 +269,22 @@ header.masthead .welcome-message{
 .body-second .em-construcao{
   font-size: 60px;
   position: absolute;
-  margin:  0 auto;
+  /*margin:  0 auto;*/
   top: calc(50% - 30px - 1em);
   z-index: 100;
   color: #EEE;
   text-transform: uppercase;
   font-weight: 700;
   padding: 1em;
+  left: 0;
   width: 100%;
   text-align: center;
   background-color: #333;
   
 }
+
+
+
 
 .body-map{
   padding: 0 100px 0 100px;
@@ -339,8 +343,8 @@ header.masthead .welcome-message{
 
 .body-map .map-holder{
   /*background: #bebebe;*/
-  width: 90%;
-  height: 480px;
+  width: 88%;
+  height: 77%;
   border-bottom: solid 4px var(--main-color);
   padding-bottom: 11px;
   position: relative;
@@ -437,6 +441,29 @@ header.masthead .welcome-message{
   width: 140px;
 }
 
+.body-map iframe{
+  z-index: 10;
+}
+
+.body-map .overlay{
+  position: absolute;
+  background: transparent;
+  top: 0;
+  height: 100%;
+  z-index: 1;
+  width: 50%;
+}
+
+.body-map .overlay.left{
+  left: 0;
+  width: 5%;
+  height: 1px;
+}
+
+.body-map .overlay.right{
+  right: 0;
+  width: 1px;
+}
 
 
 .contact{

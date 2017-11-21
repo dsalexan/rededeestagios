@@ -68,3 +68,11 @@ $('.body-map .map-holder #tip-element').click(function(){
     $('#tooltip').removeClass('tooltip-hidden');
     $("#tip-element").addClass('tip-hidden');
 });
+
+$('#map-holder').hover(function(){
+    //mouse enter
+    $('.map-hint').addClass('hint--always');
+}, function(){
+    //mouse leave
+    $('.map-hint').removeClass('hint--always');
+});
